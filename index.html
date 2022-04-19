@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Objetos y clases</title>
+		<style>
+						html,
+						body {
+							height: 100%;
+							margin: 0;
+							padding: 0;
+                            /* Eliminamos las barras de scroll del body */
+			                overflow-x:hidden;
+			                overflow-y:hidden;
+			
+						}
+						.enemigo {
+							width: 100px;
+							height: 100px;
+							border: 1px solid;
+							background-color: brown;
+							position: absolute;
+							top: 0px;
+							left: 0px;
+							display: none;
+						}
+						#escenario {
+							border: 5px dotted;
+							height: 100%;
+							width: 100%;
+						}
+		</style>
+	</head>
+	<body>
+		<div id="escenario">
+			<div id="plantilla_elemento" class="enemigo"></div>
+		</div>
+
+		<script src="src/elemento.js"></script>
+		<script src="src/nave.js"></script>
+		<script src="src/enemigo.js"></script>
+		<script src="src/juego.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
