@@ -4,9 +4,7 @@ class Nave extends Elemento{
         this.velX = velX;
         this.velY = velY;
     }
-    
-    
-    mover(){
+    setMover(){
         document.addEventListener('keydown', (key)=>{
             //console.log(key.code);
             if(key.code == 'ArrowUp') this.y = this.y - this.velY;
@@ -16,6 +14,10 @@ class Nave extends Elemento{
             this.setPosicion()
         });
        
+    }
+    setInit(){
+        super.setInit()
+        this.setImagen('nave')
     }
 }
 

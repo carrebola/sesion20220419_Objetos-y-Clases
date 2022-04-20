@@ -6,36 +6,49 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Objetos y clases</title>
 		<style>
-						html,
-						body {
-							height: 100%;
-							margin: 0;
-							padding: 0;
-                            /* Eliminamos las barras de scroll del body */
-			                overflow-x:hidden;
-			                overflow-y:hidden;
-			
-						}
-						.enemigo {
-							width: 100px;
-							height: 100px;
-							border: 1px solid;
-							background-color: brown;
-							position: absolute;
-							top: 0px;
-							left: 0px;
-							display: none;
-						}
-						#escenario {
-							border: 5px dotted;
-							height: 100%;
-							width: 100%;
-						}
+			html,
+			body {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				/* Eliminamos las barras de scroll del body */
+				overflow-x: hidden;
+				overflow-y: hidden;
+				background-image: url("src/img/galaxia.jpg");
+			}
+			.enemigo,
+			.nave {
+				width: 100px;
+				height: 100px;
+				border: 1px solid;
+				background-color: white;
+				position: absolute;
+				top: 200px;
+				left: 200px;
+				display: none;
+				background-size: cover;
+				background-position: center;
+			}
+			.nave {
+				background-image: url("src/img/nave.png");
+			}
+			.enemigo {
+				background-image: url("src/img/roca.svg");
+			}
+
+			#escenario {
+				border: 5px dotted;
+				height: 100%;
+				width: 100%;
+			}
+			.colision{
+				background-color: red;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="escenario">
-			<div id="plantilla_elemento" class="enemigo"></div>
+			<div id="plantilla_elemento" class=""></div>
 		</div>
 
 		<script src="src/elemento.js"></script>

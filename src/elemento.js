@@ -5,7 +5,9 @@ class Elemento{
         //propiedades
         this.x = x 
         this.y = y 
-        this.UI = '' //representación el el dom    
+        this.UI = '' //representación el el dom  
+        this.ancho = 100
+        this.alto = 100  
     }
     //métodos
     setUI(){
@@ -18,18 +20,26 @@ class Elemento{
     }
     setColor(color='brow'){
         this.UI.style.backgroundColor = color
-        //document.body.style.backgroundImage = "url('img_tree.png')";
+    }
+    setImagen(imagen=''){
+        this.UI.classList.add(imagen)
     }
     setPosicion(){
         this.UI.style.top = `${this.y}px`;
         this.UI.style.left = this.x + 'px';
+        this.UI.style.backgroundImage
     }
-    setVisible(){
-        this.UI.style.display="block"
+    setVisible(estado=true){
+        if(estado){
+            this.UI.style.display="block"
+        }else{
+            this.UI.style.display="none"
+        }
     }
     setInit(){
         this.setUI()
         this.setPosicion()
         this.setVisible()
+        this.setMover()
     }
 }

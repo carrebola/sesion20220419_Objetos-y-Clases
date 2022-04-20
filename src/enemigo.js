@@ -11,6 +11,11 @@ class Enemigo extends Elemento{
         this.setVelocidadAleatoria()
     }
     setMover(){
+        if(this.x>window.innerWidth) this.x = 0
+        if(this.x<0) this.x = this.x + window.innerWidth
+        if(this.y>window.innerHeight) this.y = 0
+        if(this.y<0) this.y = this.y + window.innerHeight
+
         this.x = this.x + this.velX
         this.y = this.y + this.velY
         this.setPosicion()
@@ -18,12 +23,17 @@ class Enemigo extends Elemento{
     setPosicionAleatoria(){
         const anchoPantalla = window.innerWidth;
         const altoPantalla = window.innerHeight;
-        this.x = Math.floor(Math.random()* anchoPantalla)
-        this.y = Math.floor(Math.random()* altoPantalla)
+        this.x = Math.ceil(Math.random()* anchoPantalla)
+        this.y = Math.ceil(Math.random()* altoPantalla)
     }
     setVelocidadAleatoria(){
         this.velX = Math.floor(Math.random()* 20) - 10
         this.velY = Math.floor(Math.random()* 20) - 10
     }
+    setInit(){
+        super.setInit()
+        this.setImagen('enemigo')
+    }
+    
 }
 
