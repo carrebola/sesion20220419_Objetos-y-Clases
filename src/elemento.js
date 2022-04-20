@@ -1,13 +1,13 @@
 
 
 class Elemento{
-    constructor(x=0, y=0, ancho=100, alto=100){
+    constructor(x=0, y=0){
         //propiedades
         this.x = x 
         this.y = y 
         this.UI = '' //representación el el dom  
-        this.ancho = ancho
-        this.alto = alto  
+        this.ancho = 100
+        this.alto = 100  
     }
     //métodos
     setUI(){
@@ -41,5 +41,15 @@ class Elemento{
         this.setPosicion()
         this.setVisible()
         this.setMover()
+    }
+    setPosicionAleatoria(){
+        const anchoPantalla = window.innerWidth;
+        const altoPantalla = window.innerHeight;
+        this.x = Math.ceil(Math.random()* anchoPantalla)
+        this.y = Math.ceil(Math.random()* altoPantalla)
+    }
+    setVelocidadAleatoria(){
+        this.velX = Math.floor(Math.random()* 20) - 10
+        this.velY = Math.floor(Math.random()* 20) - 10
     }
 }
