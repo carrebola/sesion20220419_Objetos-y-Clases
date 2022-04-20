@@ -1,6 +1,6 @@
 class Nave extends Elemento{
-    constructor(x=300, y=300, velX=5, velY=5){
-        super(x,y);
+    constructor(x=300, y=300, ancho=100, alto=150, velX=10, velY=10){
+        super(x,y, ancho, alto);
         this.velX = velX;
         this.velY = velY;
     }

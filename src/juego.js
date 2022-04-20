@@ -3,7 +3,7 @@ class Juego{
     constructor(numEnemigos=5){
         this.numEnemigos = numEnemigos
         this.arrayEnemigos = []
-        this.nave = new Nave(300,300)
+        this.nave = new Nave(300,300,100,150)
         this.nave.setInit()
     }
     //Funciobn para mover cosas
@@ -25,18 +25,15 @@ class Juego{
         
         
         this.arrayEnemigos.forEach((enemigo)=>{
-            const caso1 = this.nave.x + this.nave.ancho > enemigo.x && 
-        this.nave.y + this.nave.alto > enemigo.y;
-        
-            const caso2 = this.nave.x  < enemigo.x + enemigo.ancho && 
-        this.nave.y + this.nave.alto > enemigo.y;
+            
+            const caso1 = this.nave.x + this.nave.ancho > enemigo.x && this.nave.x < enemigo.x && this.nave.y + this.nave.alto > enemigo.y && this.nave.y < enemigo.y 
 
-        const caso3 = this.nave.x < enemigo.x + enemigo.ancho && this.nave.y < enemigo.y + enemigo.alto;
-        
-        const caso4 = this.nave.x + this.nave.ancho > enemigo.x &&  this.nave.y + this.nave.alto > enemigo.y;
+            const caso2 = this.nave.x < enemigo.x +  enemigo.ancho && this.nave.x + this.nave.ancho > enemigo.x && this.nave.y < enemigo.y + enemigo.alto && this.nave.y + this.nave.alto > enemigo.y
 
-        console.log(caso1, caso2, caso3, caso4);
-            if(caso1 || caso2 || caso3 || caso4){
+            
+
+        console.log(caso1);
+            if(caso1 || caso2){
                 console.log('colision');
                 this.nave.UI.classList.add('colision')
             }

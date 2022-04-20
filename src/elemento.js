@@ -1,13 +1,13 @@
 
 
 class Elemento{
-    constructor(x=0, y=0){
+    constructor(x=0, y=0, ancho=100, alto=100){
         //propiedades
         this.x = x 
         this.y = y 
         this.UI = '' //representación el el dom  
-        this.ancho = 100
-        this.alto = 100  
+        this.ancho = ancho
+        this.alto = alto  
     }
     //métodos
     setUI(){

@@ -1,6 +1,6 @@
 
 
-const juego = new Juego(10)
+const juego = new Juego(1)
 juego.play()
 
 
