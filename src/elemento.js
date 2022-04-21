@@ -1,6 +1,6 @@
 
 
-class Elemento{
+export class Elemento{
     constructor(x=0, y=0){
         //propiedades
         this.x = x 

@@ -1,5 +1,9 @@
+// Importamos las librerias (clases) que necesitamos
+import {Enemigo} from './enemigo.js'
+import {Nave} from './nave.js'
 
-class Juego{
+// Exportamos la clase Juego
+export class Juego{
     
     constructor(numEnemigos=5){
         this.contadorEnemigos = 0

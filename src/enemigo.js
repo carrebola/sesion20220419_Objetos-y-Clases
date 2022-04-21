@@ -1,8 +1,8 @@
-//********** Crar una clase *************** */
+// Importampos lo que necesitamos
+import {Elemento} from './elemento.js'
 
-
-//clase enemigo a partir de la clase Elemento
-class Enemigo extends Elemento{
+//Exportamos la clase enemigo creada a partir de la clase Elemento
+export class Enemigo extends Elemento{
     constructor(x=0, y=0, velX=1, velY=1){
         super(x,y) //representa a elemento
         this.velX = velX

@@ -1,4 +1,6 @@
 
+import {Juego} from './src/juego.js'
+
 document.querySelector('.btn-comenzar').addEventListener('click', ()=>{
     document.querySelector('.mensaje').style.display = 'none';
     

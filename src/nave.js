@@ -1,4 +1,8 @@
-class Nave extends Elemento{
+// Importamos las librerias que necesitamos
+import {Elemento} from './elemento.js'
+
+//Exportamos la clase nave heredada de elemento
+export class Nave extends Elemento{
     constructor(x=300, y=300, velX=5, velY=5){
         super(x,y);
         this.velX = velX;
