@@ -1,8 +1,6 @@
 class Nave extends Elemento{
     constructor(x=300, y=300, velX=5, velY=5){
         super(x,y);
-        this.ancho = 50;
-        this.alto = 50
         this.velX = velX;
         this.velY = velY;
         this.estado = 'vivo'
@@ -32,11 +30,15 @@ class Nave extends Elemento{
         },1000)
     }
     setMover(){ 
-        console.log(this.move);     
         if(this.move.up) this.y = this.y - this.velY;
         if(this.move.down) this.y = this.y + this.velY;
         if(this.move.left) this.x = this.x - this.velX;
         if(this.move.right) this.x = this.x + this.velX;
+        
+        if(this.x>window.innerWidth) this.x = 0
+        if(this.x<0) this.x = this.x + window.innerWidth
+        if(this.y>window.innerHeight) this.y = 0
+        if(this.y<0) this.y = this.y + window.innerHeight
         this.setPosicion()
     }
     setInit(){

@@ -15,6 +15,7 @@ class Elemento{
         const node = document.querySelector('#plantilla_elemento');
         //clonamos el div node y lo metemos en la propiedad UI
         this.UI = node.cloneNode(true);
+        this.UI.setAttribute('id', '')
         //Lo añadimos al escenario
         document.querySelector('#escenario').appendChild(this.UI);
     }
@@ -46,7 +47,8 @@ class Elemento{
         const anchoPantalla = window.innerWidth;
         const altoPantalla = window.innerHeight;
         this.x = Math.ceil(Math.random()* anchoPantalla)
-        this.y = Math.ceil(Math.random()* altoPantalla)
+        this.y = -100
+        //this.y = Math.ceil(Math.random()* altoPantalla)
     }
     setVelocidadAleatoria(){
         this.velX = Math.floor(Math.random()* 20) - 10

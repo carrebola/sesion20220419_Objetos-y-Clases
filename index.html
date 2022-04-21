@@ -19,7 +19,7 @@
 			}
 			.vidas {
 				height: 50px;
-				color:aliceblue;
+				color: aliceblue;
 				background-color: rgba(255, 250, 250, 0.2);
 				padding: 20px;
 				margin: 20px;
@@ -33,7 +33,7 @@
 				border: 5px solid brown;
 				border-radius: 20px;
 			}
-			.vidas img{
+			.vidas img {
 				height: 100%;
 				margin-right: 20px;
 			}
@@ -60,6 +60,9 @@
 			}
 
 			#escenario {
+				display: flex;
+				justify-content: center;
+				align-items: center;
 				border: 5px dotted;
 				height: 100%;
 				width: 100%;
@@ -70,19 +73,55 @@
 			.apareciendo {
 				border: 5px dotted white;
 			}
-			.ArrowUp{transform: rotate(0deg);}
-            .ArrowDown{transform: rotate(180deg);}
-            .ArrowLeft{transform: rotate(270deg);}
-            .ArrowRight{transform: rotate(90deg);}
+			.ArrowUp {
+				transform: rotate(0deg);
+			}
+			.ArrowDown {
+				transform: rotate(180deg);
+			}
+			.ArrowLeft {
+				transform: rotate(270deg);
+			}
+			.ArrowRight {
+				transform: rotate(90deg);
+			}
+			.mensaje {
+				display: block;
+				padding: 200px;
+				color: white;
+				font-size: 50px;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.7);
+				z-index: 100;
+			}
+			.btn-comenzar {
+				padding: 20px;
+				background-color: brown;
+				border: 5px solid white;
+				border-radius: 5px;
+				font-size: 30px;
+				color: white;
+			}
+			span{
+				padding: 10px;
+			}
 		</style>
 	</head>
 	<body>
-		<div id="escenario">
-			<div id="plantilla_elemento" class=""></div>
+		<div class="mensaje">
+			<p id="p">Pulsa para jugar</p>
+			<button class="btn-comenzar">Comenzar partida</button>
 		</div>
+		<div id="escenario"></div>
+		<div id="plantilla_elemento" class=""></div>
+
 		<div class="vidas">
-			<img src="src/img/nave3.svg" alt="">
-			<span class="numVidas">3</span></div>
+			<img src="src/img/nave3.svg" alt="" />
+			<span class="numVidas">3</span>
+			<span> Tiempo: </span>
+			<span class="tiempo">3</span>
+		</div>
+		
 
 		<script src="src/elemento.js"></script>
 		<script src="src/nave.js"></script>
