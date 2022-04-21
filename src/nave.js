@@ -50,8 +50,7 @@ class Nave extends Elemento{
             if(key.code == 'ArrowDown') this.move.down = true
             if(key.code == 'ArrowLeft') this.move.left = true
             if(key.code == 'ArrowRight') this.move.right = true
-            this.UI.classList.add(key.code)
-            
+            this.UI.classList.add(key.code) 
         });
         document.addEventListener('keyup', (key)=>{
             //console.log(key.code);
